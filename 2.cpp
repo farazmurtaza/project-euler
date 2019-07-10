@@ -4,27 +4,25 @@ using namespace std;
 
 int main()
 {
-    int i, j, n;
 
-    printf("Enter the number till which you want prime numbers\n");
-    scanf("%d", &n);
+    int first = 0;
+    int second = 1;
+    int fib = 0;
+    int sum = 0;
 
-    printf("Prime numbers are:-\n");
-    for (i = 2; i <= n; i++)
+    while (fib < 4000000)
     {
-        int c = 0;
-        for (j = 1; j <= i; j++)
+        fib = first + second;
+        first = second;
+        second = fib;
+        if (fib < 4000000)
         {
-            if (i % j == 0)
+            if (fib % 2 == 0)
             {
-                c++;
+                sum = sum + fib;
             }
         }
-
-        if (c == 2)
-        {
-            printf("%d \n", i);
-        }
     }
+    cout << sum << endl;
     return 0;
 }
