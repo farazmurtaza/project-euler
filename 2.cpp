@@ -19,7 +19,7 @@ int main()
         {
             if (fib % 2 == 0)
             {
-                sum = sum + fib;
+                sum += fib;
             }
         }
     }
