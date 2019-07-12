@@ -1,4 +1,5 @@
 #include <iostream>
+#include <time.h>
 
 using namespace std;
 
@@ -32,6 +33,7 @@ int get10001stPrimeMethod(int limit)
             if (count == 10001)
             {
                 cout << num[i] << endl;
+                return 1;
             }
         }
     }
@@ -39,7 +41,8 @@ int get10001stPrimeMethod(int limit)
 
 int main()
 {
-
-    get10001stPrimeMethod(1000000);
+    clock_t tStart = clock();
+    int x = get10001stPrimeMethod(1000000);
+    printf("Time taken: %.4fs\n", (double)(clock() - tStart) / CLOCKS_PER_SEC);
     return 0;
 }
