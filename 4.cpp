@@ -23,9 +23,9 @@ int main()
 
     int result;
     int x = 0;
-    for (int i = 999; i > 0; i--)
+    for (int i = 999; i > 100; i--)
     {
-        for (int j = 999; j > 0; j--)
+        for (int j = 999; j > 100; j--)
         {
             int product = i * j;
             result = checkPalindrome(product);
